@@ -19,38 +19,6 @@ import java.util.List;
  */
 public class vSanPham_repository {
 
-//    public static List<vSanPham> getAllVSP() {
-//        List<vSanPham> listVSP = new ArrayList();
-//        ResultSet rs;
-//        String sql = "SELECT DISTINCT  LOAISANPHAM.ID, LOAISANPHAM.MA, LOAISANPHAM.TEN\n"
-//                + "ID,MASP,TENSP,SOLUONG,HINHANH,SIZE,MAUSAC,CHATLIEU,GIANHAP,GIABAN,TRANGTHAI\n"
-//                + "FROM SANPHAM JOIN LOAISANPHAM ON SANPHAM.IDLOAISP=LOAISANPHAM.ID \n";
-//        rs = JDBC_Helper.selectTongQuat(sql);
-//        try {
-//            while (rs.next()) {
-//                String idloaisp = rs.getString(1);
-//                String maloaisp = rs.getString(2);
-//                String tenloaisp = rs.getString(3);
-//                String masp = rs.getString(4);
-//                String tensp = rs.getString(5);
-//                int soluong = rs.getInt(6);
-//                String hinhanhsp = rs.getString(7);
-//                String size = rs.getString(8);
-//                String mausacsp = rs.getString(9);
-//                String chatLieu = rs.getString(10);
-//                BigDecimal gianhap = rs.getBigDecimal(11);
-//                BigDecimal giaban = rs.getBigDecimal(12);
-//                int TrangThai = rs.getInt(13);
-//                vSanPham vsp = new vSanPham(masp, tensp, soluong, hinhanhsp, size, mausacsp, chatLieu, gianhap, giaban, idloaisp, maloaisp, tenloaisp, TrangThai);
-//                listVSP.add(vsp);
-//            }
-//            return listVSP;
-//        } catch (SQLException ex) {
-//            ex.printStackTrace();
-//            return null;
-//            //Logger.getLogger(GiangVien_Repository.class.getName()).log(Level.SEVERE, null, ex);
-//        }
-//    }
     public static List<vSanPham> getAllVSP() {
         List<vSanPham> listVSP = new ArrayList();
         ResultSet rs;
@@ -60,21 +28,20 @@ public class vSanPham_repository {
         rs = JDBC_Helper.selectTongQuat(sql);
         try {
             while (rs.next()) {
-                String idsanpham = rs.getString(1);
-                String masp = rs.getString(2);
-                String tensp = rs.getString(3);
-                int soluong = rs.getInt(4);
-                String hinhanhsp = rs.getString(5);
-                String size = rs.getString(6);
-                String mausacsp = rs.getString(7);
-                String chatLieu = rs.getString(8);
-                BigDecimal gianhap = rs.getBigDecimal(9);
-                BigDecimal giaban = rs.getBigDecimal(10);
-                String idloaisp = rs.getString(11);
-                String maloaisp = rs.getString(12);
-                String tenloaisp = rs.getString(13);
-                int TrangThai = rs.getInt(14);
-                vSanPham vsp = new vSanPham(idsanpham,masp,tensp,soluong,hinhanhsp,size,mausacsp,chatLieu,gianhap,giaban,idloaisp,maloaisp,tenloaisp,TrangThai);
+                String idloaisp = rs.getString(1);
+                String maloaisp = rs.getString(2);
+                String tenloaisp = rs.getString(3);
+                String masp = rs.getString(4);
+                String tensp = rs.getString(5);
+                int soluong = rs.getInt(6);
+                String hinhanhsp = rs.getString(7);
+                String size = rs.getString(8);
+                String mausacsp = rs.getString(9);
+                String chatLieu = rs.getString(10);
+                BigDecimal gianhap = rs.getBigDecimal(11);
+                BigDecimal giaban = rs.getBigDecimal(12);
+                int TrangThai = rs.getInt(13);
+                vSanPham vsp = new vSanPham(masp, tensp, soluong, hinhanhsp, size, mausacsp, chatLieu, gianhap, giaban, idloaisp, maloaisp, tenloaisp, TrangThai);
                 listVSP.add(vsp);
             }
             return listVSP;
@@ -84,6 +51,42 @@ public class vSanPham_repository {
             //Logger.getLogger(GiangVien_Repository.class.getName()).log(Level.SEVERE, null, ex);
         }
     }
+    
+//    Phan ay sai thang nao mo ra la ngu
+    
+//    public static List<vSanPham> getAllVSP() {
+//        List<vSanPham> listVSP = new ArrayList();
+//        ResultSet rs;
+//        String sql = "SELECT DISTINCT  LOAISANPHAM.ID, LOAISANPHAM.MA, LOAISANPHAM.TEN\n"
+//                + "ID,MASP,TENSP,SOLUONG,HINHANH,SIZE,MAUSAC,CHATLIEU,GIANHAP,GIABAN,TRANGTHAI\n"
+//                + "FROM SANPHAM JOIN LOAISANPHAM ON SANPHAM.IDLOAISP=LOAISANPHAM.ID \n";
+//        rs = JDBC_Helper.selectTongQuat(sql);
+//        try {
+//            while (rs.next()) {
+//                String idsanpham = rs.getString(1);
+//                String masp = rs.getString(2);
+//                String tensp = rs.getString(3);
+//                int soluong = rs.getInt(4);
+//                String hinhanhsp = rs.getString(5);
+//                String size = rs.getString(6);
+//                String mausacsp = rs.getString(7);
+//                String chatLieu = rs.getString(8);
+//                BigDecimal gianhap = rs.getBigDecimal(9);
+//                BigDecimal giaban = rs.getBigDecimal(10);
+//                String idloaisp = rs.getString(11);
+//                String maloaisp = rs.getString(12);
+//                String tenloaisp = rs.getString(13);
+//                int TrangThai = rs.getInt(14);
+//                vSanPham vsp = new vSanPham(idsanpham,masp,tensp,soluong,hinhanhsp,size,mausacsp,chatLieu,gianhap,giaban,idloaisp,maloaisp,tenloaisp,TrangThai);
+//                listVSP.add(vsp);
+//            }
+//            return listVSP;
+//        } catch (SQLException ex) {
+//            ex.printStackTrace();
+//            return null;
+//            //Logger.getLogger(GiangVien_Repository.class.getName()).log(Level.SEVERE, null, ex);
+//        }
+//    }
 
     public static vSanPham getVSPbymaSP(String MA) {
         vSanPham vsp = new vSanPham();
