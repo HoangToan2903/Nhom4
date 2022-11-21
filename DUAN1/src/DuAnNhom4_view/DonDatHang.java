@@ -189,6 +189,11 @@ public class DonDatHang extends javax.swing.JPanel {
         jLabel6.setText("Trạng thái:");
 
         cbDaThanhToan.setText("Đã thanh toán");
+        cbDaThanhToan.addItemListener(new java.awt.event.ItemListener() {
+            public void itemStateChanged(java.awt.event.ItemEvent evt) {
+                cbDaThanhToanItemStateChanged(evt);
+            }
+        });
 
         cbChuaThanhToan.setText("Chưa thanh toán");
 
@@ -266,6 +271,10 @@ public class DonDatHang extends javax.swing.JPanel {
         // TODO add your handling code here:
         fillTable();
     }//GEN-LAST:event_tbHoaDonDatHangMouseClicked
+
+    private void cbDaThanhToanItemStateChanged(java.awt.event.ItemEvent evt) {//GEN-FIRST:event_cbDaThanhToanItemStateChanged
+        // TODO add your handling code here:
+    }//GEN-LAST:event_cbDaThanhToanItemStateChanged
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
