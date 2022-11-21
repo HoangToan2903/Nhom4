@@ -14,9 +14,9 @@ import java.sql.SQLException;
  */
 public class DBContext {
 
-    static String url = "jdbc:sqlserver://localhost\\DESTROYER\\SQLEXPRESS:1433;databaseName=DATA_DUAN";
+    static String url = "jdbc:sqlserver://localhost\\DESTROYER\\SQLEXPRESS:1433;databaseName=DUAN1";
     static String user = "sa";
-    static String pass = "123456789";
+    static String pass = "songlong";
 
     static {
         try {
